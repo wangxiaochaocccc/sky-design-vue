@@ -2,6 +2,10 @@
  <div>
   <h1>button测试</h1>
   <sky-button disabled type="primary" ref="buttonRef">确定</sky-button>
+  <h1>resetCss测试</h1>
+  <h2>大家啊大家啊大家</h2>
+  <h3>大家啊大家啊大家</h3>
+  <a href="">大家啊大家啊大家</a>
  </div>
 </template>
 <script setup lang="ts">
