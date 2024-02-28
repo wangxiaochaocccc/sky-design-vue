@@ -10,6 +10,8 @@
         'is-disabled':disabled
       }"
       :disabled="disabled"
+      :type="nativeType"
+      :autofocus="autofocus"
     >
       <span>
         <slot/>
@@ -20,7 +22,9 @@
 <script setup lang="ts">
 import type { ButtonProps } from './types'
 
-defineProps<ButtonProps>()
+withDefaults(defineProps<ButtonProps>(), {
+  nativeType: 'button'
+})
 </script>
 <style scoped>
 
