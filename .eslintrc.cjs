@@ -12,7 +12,8 @@ module.exports = {
 
     },
     "rules": {
-        "semi":0
+        "semi": 0,
+        "vue/multi-word-component-names":0
     },
     
 };
