@@ -1,5 +1,6 @@
 <template>
     <button
+      ref="_ref"
       class="sky-button"
       :class="{
         [`sky-button--${type}`]:type,
@@ -20,10 +21,17 @@
 </template>
 
 <script setup lang="ts">
+import {ref} from 'vue'
 import type { ButtonProps } from './types'
 
 withDefaults(defineProps<ButtonProps>(), {
   nativeType: 'button'
+})
+
+const _ref = ref<HTMLButtonElement>()
+
+defineExpose({
+  ref: _ref
 })
 </script>
 <style scoped>

@@ -11,3 +11,7 @@ export interface ButtonProps {
   nativeType?: NativeType,
   autofocus?: boolean
 }
+
+export interface ButtonInstance {
+  ref:HTMLButtonElement,
+}

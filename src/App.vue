@@ -1,10 +1,19 @@
 <template>
  <div>
   <h1>button测试</h1>
-  <sky-button disabled type="primary">确定</sky-button>
+  <sky-button disabled type="primary" ref="buttonRef">确定</sky-button>
  </div>
 </template>
 <script setup lang="ts">
+import { ref,onMounted } from 'vue'
 import SkyButton from './components/button/Button.vue'
+import {ButtonInstance} from './components/button/types'
+const buttonRef = ref<ButtonInstance | null>(null)
+
+onMounted(() => {
+  if (buttonRef.value) {
+    console.log(buttonRef.value.ref,1111111);
+  }
+})
 </script>
 
