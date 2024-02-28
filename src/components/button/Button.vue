@@ -7,7 +7,7 @@
         [`sky-button--${size}`]:size,
         'is-circle':circle,
         'is-plain':plain,
-        'is-rounded':rounded,
+        'is-round':rounded,
         'is-disabled':disabled
       }"
       :disabled="disabled"
@@ -23,6 +23,7 @@
 <script setup lang="ts">
 import {ref} from 'vue'
 import type { ButtonProps } from './types'
+import './style.css'
 
 withDefaults(defineProps<ButtonProps>(), {
   nativeType: 'button'

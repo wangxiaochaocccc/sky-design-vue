@@ -1,11 +1,23 @@
 <template>
  <div>
   <h1>button测试</h1>
-  <sky-button disabled type="primary" ref="buttonRef">确定</sky-button>
-  <h1>resetCss测试</h1>
-  <h2>大家啊大家啊大家</h2>
-  <h3>大家啊大家啊大家</h3>
-  <a href="">大家啊大家啊大家</a>
+  <div>
+    <sky-button disabled ref="buttonRef">确定</sky-button>
+    <sky-button rounded ref="buttonRef">确定</sky-button>
+    <sky-button circle ref="buttonRef">确定</sky-button>
+    <sky-button plain ref="buttonRef">确定</sky-button>
+  </div>
+  <div>
+    <sky-button type="primary">确定</sky-button>
+    <sky-button  type="info">确定</sky-button>
+    <sky-button type="success">确定</sky-button>
+    <sky-button  type="warning">确定</sky-button>
+    <sky-button  type="danger">确定</sky-button>
+  </div>
+  <div>
+    <sky-button type="primary" size="small">确定</sky-button>
+    <sky-button  type="info" size="large">确定</sky-button>
+  </div>
  </div>
 </template>
 <script setup lang="ts">

@@ -1,0 +1,125 @@
+.sky-button {
+  --sky-button-font-weight: var(--sky-font-weight-primary);
+  --sky-button-border-color: var(--sky-border-color);
+  --sky-button-bg-color: var(--sky-fill-color-blank);
+  --sky-button-text-color: var(--sky-text-color-regular);
+  --sky-button-disabled-text-color: var(--sky-disabled-text-color);
+  --sky-button-disabled-bg-color: var(--sky-fill-color-blank);
+  --sky-button-disabled-border-color: var(--sky-border-color-light);
+  --sky-button-hover-text-color: var(--sky-color-primary);
+  --sky-button-hover-bg-color: var(--sky-color-primary-light-9);
+  --sky-button-hover-border-color: var(--sky-color-primary-light-7);
+  --sky-button-active-text-color: var(--sky-button-hover-text-color);
+  --sky-button-active-border-color: var(--sky-color-primary);
+  --sky-button-active-bg-color: var(--sky-button-hover-bg-color);
+  --sky-button-outline-color: var(--sky-color-primary-light-5);
+  --sky-button-active-color: var(--sky-text-color-primary);
+}
+.sky-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  height: 32px;
+  white-space: nowrap;
+  cursor: pointer;
+  color: var(--sky-button-text-color);
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  transition: .1s;
+  font-weight: var(--sky-button-font-weight);
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  background-color: var(--sky-button-bg-color);
+  border: var(--sky-border);
+  border-color: var(--sky-button-border-color);
+  padding: 8px 15px;
+  font-size: var(--sky-font-size-base);
+  border-radius: var(--sky-border-radius-base);
+  & + & {
+    margin-left: 12px;
+  }
+  &:hover,
+  &:focus {
+    color: var(--sky-button-hover-text-color);
+    border-color: var(--sky-button-hover-border-color);
+    background-color: var(--sky-button-hover-bg-color);
+    outline: none;    
+  }
+  &:active {
+    color: var(--sky-button-active-text-color);
+    border-color: var(--sky-button-active-border-color);
+    background-color: var(--sky-button-active-bg-color);
+    outline: none;
+  }
+  &.is-plain {
+    --sky-button-hover-text-color: var(--sky-color-primary);
+    --sky-button-hover-bg-color: var(--sky-fill-color-blank);
+    --sky-button-hover-border-color: var(--sky-color-primary);    
+  }
+  /*round*/
+  &.is-round {
+    border-radius: var(--sky-border-radius-round);
+  }
+  /*circle*/
+  &.is-circle {
+    width: 32px;
+    border-radius: 50%;
+    padding: 8px;
+  }
+  /*disabled*/
+  &.is-disabled, &.is-disabled:hover, &.is-disabled:focus, 
+  &[disabled], &[disabled]:hover, &[disabled]:focus 
+  {
+    color: var(--sky-button-disabled-text-color);
+    cursor: not-allowed;
+    background-image: none;
+    background-color: var(--sky-button-disabled-bg-color);
+    border-color: var(--sky-button-disabled-border-color);
+  }
+  [class*=vk-icon] + span {
+    margin-left: 6px;
+  }
+}
+@each $val in primary,success,warning,info,danger {
+  .sky-button--$(val) {
+    --sky-button-text-color: var(--sky-color-white);
+    --sky-button-bg-color: var(--sky-color-$(val));
+    --sky-button-border-color: var(--sky-color-$(val));
+    --sky-button-outline-color: var(--sky-color-$(val)-light-5);
+    --sky-button-active-color: var(--sky-color-$(val)-dark-2);
+    --sky-button-hover-text-color: var(--sky-color-white);
+    --sky-button-hover-bg-color: var(--sky-color-$(val)-light-3);
+    --sky-button-hover-border-color: var(--sky-color-$(val)-light-3);
+    --sky-button-active-bg-color: var(--sky-color-$(val)-dark-2);
+    --sky-button-active-border-color: var(--sky-color-$(val)-dark-2);
+    --sky-button-disabled-text-color: var(--sky-color-white);
+    --sky-button-disabled-bg-color: var(--sky-color-$(val)-light-5);
+    --sky-button-disabled-border-color: var(--sky-color-$(val)-light-5);
+  }
+  .sky-button--$(val).is-plain {
+    --sky-button-text-color: var(--sky-color-$(val));
+    --sky-button-bg-color: var(--sky-color-$(val)-light-9);
+    --sky-button-border-color: var(--sky-color-$(val)-light-5);
+    --sky-button-hover-text-color: var(--sky-color-white);
+    --sky-button-hover-bg-color: var(--sky-color-$(val));
+    --sky-button-hover-border-color: var(--sky-color-$(val));
+    --sky-button-active-text-color: var(--sky-color-white);
+  }
+}
+.sky-button--large {
+  --sky-button-size: 40px;
+  height: var(--sky-button-size);
+  padding: 12px 19px;
+  font-size: var(--sky-font-size-base);
+  border-radius: var(--sky-border-radius-base);
+}
+.sky-button--small {
+  --sky-button-size: 24px;
+  height: var(--sky-button-size);
+  padding: 5px 11px;
+  font-size: 12px;
+  border-radius: calc(var(--sky-border-radius-base) - 1px);
+}
