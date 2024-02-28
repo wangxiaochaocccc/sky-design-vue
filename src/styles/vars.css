@@ -1,0 +1,95 @@
+:root {
+  /* 主色 */
+  --sky-color-white: #ffffff;
+  --sky-color-white: #ffffff;
+  --sky-color-black: #000000;
+  --sky-color-primary: #409eff;
+  --sky-color-primary-light-3: #79bbff;
+  --sky-color-primary-light-5: #a0cfff;
+  --sky-color-primary-light-7: #c6e2ff;
+  --sky-color-primary-light-8: #d9ecff;
+  --sky-color-primary-light-9: #ecf5ff;
+  --sky-color-primary-dark-2: #337ecc;
+  --sky-color-success: #67c23a;
+  --sky-color-success-light-3: #95d475;
+  --sky-color-success-light-5: #b3e19d;
+  --sky-color-success-light-7: #d1edc4;
+  --sky-color-success-light-8: #e1f3d8;
+  --sky-color-success-light-9: #f0f9eb;
+  --sky-color-success-dark-2: #529b2e;
+  --sky-color-warning: #e6a23c;
+  --sky-color-warning-light-3: #eebe77;
+  --sky-color-warning-light-5: #f3d19e;
+  --sky-color-warning-light-7: #f8e3c5;
+  --sky-color-warning-light-8: #faecd8;
+  --sky-color-warning-light-9: #fdf6ec;
+  --sky-color-warning-dark-2: #b88230;
+  --sky-color-danger: #f56c6c;
+  --sky-color-danger-light-3: #f89898;
+  --sky-color-danger-light-5: #fab6b6;
+  --sky-color-danger-light-7: #fcd3d3;
+  --sky-color-danger-light-8: #fde2e2;
+  --sky-color-danger-light-9: #fef0f0;
+  --sky-color-danger-dark-2: #c45656;
+  --sky-color-error: #f56c6c;
+  --sky-color-error-light-3: #f89898;
+  --sky-color-error-light-5: #fab6b6;
+  --sky-color-error-light-7: #fcd3d3;
+  --sky-color-error-light-8: #fde2e2;
+  --sky-color-error-light-9: #fef0f0;
+  --sky-color-error-dark-2: #c45656;
+  --sky-color-info: #909399;
+  --sky-color-info-light-3: #b1b3b8;
+  --sky-color-info-light-5: #c8c9cc;
+  --sky-color-info-light-7: #dedfe0;
+  --sky-color-info-light-8: #e9e9eb;
+  --sky-color-info-light-9: #f4f4f5;
+  --sky-color-info-dark-2: #73767a;
+  /* 中性色 */
+  --sky-bg-color: #ffffff;
+  --sky-bg-color-page: #f2f3f5;
+  --sky-bg-color-overlay: #ffffff;
+  --sky-text-color-primary: #303133;
+  --sky-text-color-regular: #606266;
+  --sky-text-color-secondary: #909399;
+  --sky-text-color-placeholder: #a8abb2;
+  --sky-text-color-disabled: #c0c4cc;
+  --sky-border-color: #dcdfe6;
+  --sky-border-color-light: #e4e7ed;
+  --sky-border-color-lighter: #ebeef5;
+  --sky-border-color-extra-light: #f2f6fc;
+  --sky-border-color-dark: #d4d7de;
+  --sky-border-color-darker: #cdd0d6;
+  --sky-fill-color: #f0f2f5;
+  --sky-fill-color-light: #f5f7fa;
+  --sky-fill-color-lighter: #fafafa;
+  --sky-fill-color-extra-light: #fafcff;
+  --sky-fill-color-dark: #ebedf0;
+  --sky-fill-color-darker: #e6e8eb;
+  --sky-fill-color-blank: #ffffff;
+
+  /* border */
+  --sky-border-width: 1px;
+  --sky-border-style: solid;
+  --sky-border-color-hover: var(--sky-text-color-disabled);
+  --sky-border: var(--sky-border-width) var(--sky-border-style) var(--sky-border-color);
+  --sky-border-radius-base: 4px;
+  --sky-border-radius-small: 2px;
+  --sky-border-radius-round: 20px;
+  --sky-border-radius-circle: 100%;
+
+  /*font*/
+  --sky-font-size-extra-large: 20px;
+  --sky-font-size-large: 18px;
+  --sky-font-size-medium: 16px;
+  --sky-font-size-base: 14px;
+  --sky-font-size-small: 13px;
+  --sky-font-size-extra-small: 12px;
+  --sky-font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "\5fae\8f6f\96c5\9ed1", Arial, sans-serif;
+  --sky-font-weight-primary: 500;
+
+  /*disabled*/
+  --sky-disabled-bg-color: var(--sky-fill-color-light);
+  --sky-disabled-text-color: var(--sky-text-color-placeholder);
+  --sky-disabled-border-color: var(--sky-border-color-light);
+}

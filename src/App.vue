@@ -17,3 +17,9 @@ onMounted(() => {
 })
 </script>
 
+<style>
+h1 {
+  color:var(--sky-color-primary)
+}
+</style>
+
