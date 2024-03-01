@@ -5,12 +5,21 @@
         'is-disabled':disabled
       }"
     >
-      <div class="collapse-item__title" :id="`collapse-title-${name}`" @click="handleClick">
+      <div 
+        class="collapse-item__title" 
+        :class="{
+          'is-disabled':disabled,
+          'is-active':isActive
+        }"
+        :id="`collapse-title-${name}`" 
+        @click="handleClick">
         <slot name="title">{{ title }}</slot>
       </div>
-      <div class="collapse-item__content" :id="`collapse-content-${name}`" v-show="isActive">
-        <slot></slot>
-      </div>
+      <Transition name="fade">
+        <div class="collapse-item__content" :id="`collapse-content-${name}`" v-show="isActive">
+          <slot></slot>
+        </div>
+      </Transition>
     </div>
 </template>
 

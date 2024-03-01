@@ -1,0 +1,66 @@
+.collapse {
+  --sky-collapse-border-color: var(--sky-border-color-light);
+  --sky-collapse-header-height: 48px;
+  --sky-collapse-header-bg-color: var(--sky-fill-color-blank);
+  --sky-collapse-header-text-color: var(--sky-text-color-primary);
+  --sky-collapse-header-font-size: 13px;
+  --sky-collapse-content-bg-color: var(--sky-fill-color-blank);
+  --sky-collapse-content-font-size: 13px;
+  --sky-collapse-content-text-color: var(--sky-text-color-primary);
+  --sky-collapse-disabled-text-color: var(--sky-disabled-text-color);
+  --sky-collapse-disabled-border-color: var(--sky-border-color-lighter);
+  border-top: 1px solid var(--sky-collapse-border-color);
+  border-bottom: 1px solid var(--sky-collapse-border-color);
+}
+.collapse-item__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--sky-collapse-header-height);
+  line-height: var(--sky-collapse-header-height);
+  background-color: var(--sky-collapse-header-bg-color);
+  color: var(--sky-collapse-header-text-color);
+  cursor: pointer;
+  font-size: var(--sky-collapse-header-font-size);
+  font-weight: 500;
+  transition: border-bottom-color var(--sky-transition-duration);
+  outline: none;
+  border-bottom: 1px solid var(--sky-collapse-border-color);
+  &.is-disabled {
+    color: var(--sky-collapse-disabled-text-color);
+    cursor: not-allowed;
+    background-image: none;
+  }
+  &.is-active {
+    border-bottom-color: transparent;
+    .header-angle {
+      transform: rotate(90deg);
+    }
+  }
+  .header-angle {
+    transition: transform var(--sky-transition-duration);
+  }
+}
+.collapse-item__content {
+  will-change: height;
+  background-color: var(--sky-collapse-content-bg-color);
+  overflow: hidden;
+  box-sizing: border-box;
+  font-size: var(--sky-collapse-content-font-size);
+  color: var(--sky-collapse-content-text-color);
+  border-bottom: 1px solid var(--sky-collapse-border-color);
+  padding-bottom: 25px;
+}
+.slide-enter-active, .slide-leave-active {
+  transition: height var(--sky-transition-duration);
+}
+
+.fade-enter-from {
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: opacity 1s ease-in-out;
+}
+.fade-enter-to {
+  opacity: 1;
+}
