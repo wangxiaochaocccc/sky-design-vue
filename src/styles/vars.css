@@ -3,7 +3,25 @@
   --sky-color-white: #ffffff;
   --sky-color-white: #ffffff;
   --sky-color-black: #000000;
-  --sky-color-primary: #409eff;
+
+  --colors: (
+    primary: #409eff,
+    success: #67c23a,
+    warning: #e6a23c,
+    danger: #f56c6c,
+    info: #909399
+  );
+
+  @each $key, $value in var(--colors) {
+    --sky-color-$(key): $(value);
+    @for $i from 3 to 9 by 2 {
+      --sky-color-$(key)-light-$(i): mix(#fff, $(value), .$(i))
+    }
+    --sky-color-$(key)-light-8: mix(#fff, $(value), .8);
+    --sky-color-$(key)-dark-2: mix(#000, $(value), .2);
+  }
+
+  /* --sky-color-primary: #409eff;
   --sky-color-primary-light-3: #79bbff;
   --sky-color-primary-light-5: #a0cfff;
   --sky-color-primary-light-7: #c6e2ff;
@@ -44,7 +62,7 @@
   --sky-color-info-light-7: #dedfe0;
   --sky-color-info-light-8: #e9e9eb;
   --sky-color-info-light-9: #f4f4f5;
-  --sky-color-info-dark-2: #73767a;
+  --sky-color-info-dark-2: #73767a; */
   /* 中性色 */
   --sky-bg-color: #ffffff;
   --sky-bg-color-page: #f2f3f5;
