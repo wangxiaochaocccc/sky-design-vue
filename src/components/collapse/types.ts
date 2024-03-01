@@ -6,7 +6,15 @@ export interface CollapseItemProps {
   title?: string;
   disabled?: boolean
 }
+export interface CollapseProps {
+  modelValue: nameTypes[];
+  accrroding?:boolean
+}
 
+export interface CollapseEmits {
+  (e: 'update:modelValue', values: nameTypes[]): void;
+  (e: 'change', values: nameTypes[]): void;
+}
 export interface CollapseContext {
   activeName: Ref<nameTypes[]>;
   handleClickTitle:(name:nameTypes)=>void

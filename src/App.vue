@@ -19,7 +19,7 @@
     <sky-button  type="info" size="large">确定</sky-button>
   </div>
   <h1>collapse测试</h1>
-  <Collapse> 
+  <Collapse v-model="openValue" accrroding> 
     <item name="a">
       <template #title>
         <h1>我是标题</h1>
@@ -33,6 +33,7 @@
       <div>我是内容3</div>
     </item>
   </Collapse>
+  {{ openValue }}
  </div>
 </template>
 <script setup lang="ts">
@@ -43,7 +44,7 @@ import Collapse from './components/collapse/collapse.vue'
 import Item from './components/collapse/collapse-item.vue'
 
 const buttonRef = ref<ButtonInstance | null>(null)
-
+const openValue = ref(['a'])
 onMounted(() => {
   if (buttonRef.value) {
     console.log(buttonRef.value.ref,1111111);
