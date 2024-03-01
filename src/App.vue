@@ -18,12 +18,30 @@
     <sky-button type="primary" size="small">确定</sky-button>
     <sky-button  type="info" size="large">确定</sky-button>
   </div>
+  <h1>collapse测试</h1>
+  <Collapse> 
+    <item name="a">
+      <template #title>
+        <h1>我是标题</h1>
+      </template>
+      <div>我是内容</div>
+    </item>
+    <item name="b" title=">我是标题2">
+      <div>我是内容2</div>
+    </item>
+    <item name="c" title=">我是标题3" disabled>
+      <div>我是内容3</div>
+    </item>
+  </Collapse>
  </div>
 </template>
 <script setup lang="ts">
 import { ref,onMounted } from 'vue'
 import SkyButton from './components/button/Button.vue'
-import {ButtonInstance} from './components/button/types'
+import { ButtonInstance } from './components/button/types'
+import Collapse from './components/collapse/collapse.vue'
+import Item from './components/collapse/collapse-item.vue'
+
 const buttonRef = ref<ButtonInstance | null>(null)
 
 onMounted(() => {
