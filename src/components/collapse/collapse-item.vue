@@ -15,9 +15,11 @@
         @click="handleClick">
         <slot name="title">{{ title }}</slot>
       </div>
-      <Transition name="fade">
-        <div class="collapse-item__content" :id="`collapse-content-${name}`" v-show="isActive">
-          <slot></slot>
+      <Transition name="fade" v-on="TransitionEvents">
+        <div class="collapse-item__wrapper" v-show="isActive">
+          <div class="collapse-item__content" :id="`collapse-content-${name}`" >
+            <slot></slot>
+          </div>
         </div>
       </Transition>
     </div>
@@ -35,6 +37,31 @@ const isActive = computed(() => collapseContext?.activeName.value.includes(props
 const handleClick = () => {
   if (props.disabled) return
   collapseContext?.handleClickTitle(props.name)
+}
+// 动画
+const TransitionEvents: Record<string, (el: HTMLElement) => void> = {
+  beforeEnter(el) {
+    el.style.height = '0px'
+    el.style.overflow = 'hidden'
+  },
+  enter(el) {
+    el.style.height = `${el.scrollHeight}px`
+  },
+  afterEnter(el) {
+    el.style.height = ''
+    el.style.overflow = ''
+  },
+  beforeLeave(el) { 
+    el.style.height = `${el.scrollHeight}px`
+    el.style.overflow = 'hidden'
+  },
+  leave(el) {
+    el.style.height = '0px'
+  },
+  afterLeave(el) {
+    el.style.height = ''
+    el.style.overflow = ''
+  }
 }
 </script>
 <style>

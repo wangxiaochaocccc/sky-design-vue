@@ -110,4 +110,8 @@
   --sky-disabled-bg-color: var(--sky-fill-color-light);
   --sky-disabled-text-color: var(--sky-text-color-placeholder);
   --sky-disabled-border-color: var(--sky-border-color-light);
+
+  /*animation*/
+  --sky-transition-duration: .3s;
+  --sky-transition-duration-fast: .2s;
 }
