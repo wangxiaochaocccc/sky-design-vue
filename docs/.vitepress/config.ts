@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "My Awesome Project",
   description: "A VitePress Site",
+  srcDir:'components',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -17,6 +18,12 @@ export default defineConfig({
         items: [
           { text: 'Markdown Examples', link: '/markdown-examples' },
           { text: 'Runtime API Examples', link: '/api-examples' }
+        ]
+      },
+      {
+        text: 'Test',
+        items: [
+          { text: 'Button', link: '/components/button' }
         ]
       }
     ],
