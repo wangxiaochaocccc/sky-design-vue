@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 export default defineConfig({
   title: "My Awesome Project",
   description: "A VitePress Site",
-  srcDir:'components',
+  srcDir: 'components',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -25,7 +25,7 @@ export default defineConfig({
       {
         text: 'Test',
         items: [
-          { text: 'Button', link: '/components/button' }
+          { text: 'Button', link: '/button' }
         ]
       }
     ],
@@ -38,7 +38,7 @@ export default defineConfig({
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('../../src', import.meta.url))
-      }
+      },
     }
   },
   markdown: {

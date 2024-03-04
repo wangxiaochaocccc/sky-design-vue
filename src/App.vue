@@ -38,10 +38,10 @@
 </template>
 <script setup lang="ts">
 import { ref,onMounted } from 'vue'
-import SkyButton from './components/button/Button.vue'
-import { ButtonInstance } from './components/button/types'
-import Collapse from './components/collapse/collapse.vue'
-import Item from './components/collapse/collapse-item.vue'
+import SkyButton from '@/components/button/Button.vue'
+import { ButtonInstance } from '@/components/button/types.ts'
+import Collapse from '@/components/collapse/collapse.vue'
+import Item from '@/components/collapse/collapse-item.vue'
 
 const buttonRef = ref<ButtonInstance | null>(null)
 const openValue = ref(['a'])

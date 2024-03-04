@@ -1,7 +1,7 @@
 import defaultTheme from 'vitepress/theme'
 import { AntDesignContainer, ElementPlusContainer, NaiveUIContainer } from '@vitepress-demo-preview/component'
 import '@vitepress-demo-preview/component/dist/style.css'
-import '../../../src/styles/index.css'
+import '@/styles/index.css'
 
 export default {
   ...defaultTheme,
