@@ -9,8 +9,4 @@ description: 用的操作按钮常
 ## 基础用法
 使用'type'、'plain'、'cilcle'和'round'来定义按钮样式。
 
-<script setup>
-import Button from '../../src/components/button/Button.vue'
-</script>
-
-<Button type="primary">text</Button>
+<preview path="../demo/button/basic.vue" title="基础用法" description="Button 组件的基础用法"></preview>
