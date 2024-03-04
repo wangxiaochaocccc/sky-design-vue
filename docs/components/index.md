@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "My Awesome Project"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: "公司组件库"
+  text: "Vue3+Vite+Ts"
+  tagline: 二次封装ant-design-vue
   actions:
     - theme: brand
       text: Markdown Examples
