@@ -6,17 +6,21 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/tj-design-vue.umd.cjs",
-  "module": "./dist/tj-design-vue.js",
+  "main": "./dist/umd/tj-design-vue.umd.cjs",
+  "module": "./dist/es/tj-design-vue.js",
+  "types":"./dist/types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/tj-design-vue.js",
-      "require": "./dist/tj-design-vue.umd.cjs"
+      "import": "./dist/es/tj-design-vue.js",
+      "require": "./dist/umd/tj-design-vue.umd.cjs"
     }
   },
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "build": "run-p build-umd build-es",
+    "build-only": "vite build",
+    "build-umd": "vite build --config vite.umd.config.ts",
+    "build-es": "vite build --config vite.es.config.ts",
     "preview": "vite preview",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
