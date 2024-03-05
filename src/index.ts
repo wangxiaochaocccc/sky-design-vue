@@ -1,6 +1,8 @@
 import type { App } from 'vue'
 import Button from '@/components/button'
 
+import './styles/index.css'
+
 const components = [
   Button
 ]
