@@ -3,13 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "files": ["dist"],
-  "main":"./dist/tj-design-vue.umd.cjs",
-  "module":"./dist/tj-design-vue.js",
-  "exports":{
-    ".":{
-      "import":"./dist/tj-design-vue.js",
-      "require":"./dist/tj-design-vue.umd.cjs"
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/tj-design-vue.umd.cjs",
+  "module": "./dist/tj-design-vue.js",
+  "exports": {
+    ".": {
+      "import": "./dist/tj-design-vue.js",
+      "require": "./dist/tj-design-vue.umd.cjs"
     }
   },
   "scripts": {
@@ -40,6 +42,7 @@
     "postcss-for": "^2.1.1",
     "typescript": "^5.2.2",
     "vite": "^4.4.5",
+    "vite-plugin-dts": "^3.7.3",
     "vite-plugin-eslint": "^1.8.1",
     "vitepress": "1.0.0-rc.44",
     "vue-tsc": "^1.8.27"
