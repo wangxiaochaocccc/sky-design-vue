@@ -3,6 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": ["dist"],
+  "main":"./dist/tj-design-vue.umd.cjs",
+  "module":"./dist/tj-design-vue.js",
+  "exports":{
+    ".":{
+      "import":"./dist/tj-design-vue.js",
+      "require":"./dist/tj-design-vue.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
