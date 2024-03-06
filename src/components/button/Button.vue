@@ -25,6 +25,10 @@ import {ref} from 'vue'
 import type { ButtonProps } from './types'
 import './style.css'
 
+defineOptions({
+  name: 'SkyButton'
+})
+
 withDefaults(defineProps<ButtonProps>(), {
   nativeType: 'button'
 })

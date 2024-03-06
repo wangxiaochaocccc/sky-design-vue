@@ -12,7 +12,8 @@
   "exports": {
     ".": {
       "import": "./dist/es/tj-design-vue.js",
-      "require": "./dist/umd/tj-design-vue.umd.cjs"
+      "require": "./dist/umd/tj-design-vue.umd.cjs",
+      "types":"./dist/types/index.d.ts"
     }
   },
   "scripts": {
@@ -44,7 +45,7 @@
     "postcss-each": "^1.1.0",
     "postcss-each-variables": "^0.3.0",
     "postcss-for": "^2.1.1",
-    "typescript": "^5.2.2",
+    "typescript": "^4.7.4",
     "vite": "^4.4.5",
     "vite-plugin-dts": "^3.7.3",
     "vite-plugin-eslint": "^1.8.1",
