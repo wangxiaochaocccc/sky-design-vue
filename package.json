@@ -1,9 +1,14 @@
 {
-  "name": "sky-design-vue",
+  "name": "@wangxiaochao/sky-design-vue",
   "version": "1.0.0",
   "description": "Vue3 components library",
   "author": "wangxiaochao",
   "license": "MIT",
+  "keywords": [
+    "Component",
+    "UI",
+    "Vue3"
+  ],
   "type": "module",
   "sideEffects": ["dist/index.css"],
   "files": [
@@ -37,7 +42,8 @@
     "preview": "vite preview",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
    
