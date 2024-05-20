@@ -10,7 +10,9 @@
     "Vue3"
   ],
   "type": "module",
-  "sideEffects": ["dist/index.css"],
+  "sideEffects": [
+    "dist/index.css"
+  ],
   "files": [
     "dist"
   ],
@@ -38,7 +40,7 @@
     "build-only": "run-p build-umd build-es",
     "build-umd": "vite build --config vite.umd.config.ts",
     "build-es": "vite build --config vite.es.config.ts",
-    "move-style":"move-file  dist/es/index.css dist/index.css",
+    "move-style": "move-file  dist/es/index.css dist/index.css",
     "preview": "vite preview",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
@@ -46,7 +48,9 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-   
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/vue-fontawesome": "^3.0.6"
   },
   "peerDependencies": {
     "vue": "^3.3.4"

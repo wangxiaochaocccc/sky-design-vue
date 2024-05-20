@@ -33,7 +33,7 @@
       <div>我是内容3</div>
     </item>
   </Collapse>
-  {{ openValue }}
+  {{ openValue }}<font-awesome-icon icon="fa-solid fa-user-secret" /><font-awesome-icon icon="fa-solid fa-phone" />
  </div>
 </template>
 <script setup lang="ts">
