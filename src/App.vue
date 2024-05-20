@@ -33,7 +33,8 @@
       <div>我是内容3</div>
     </item>
   </Collapse>
-  {{ openValue }}<font-awesome-icon icon="fa-solid fa-user-secret" /><font-awesome-icon icon="fa-solid fa-phone" />
+  {{ openValue }}
+  <icon icon="comment"></icon>
  </div>
 </template>
 <script setup lang="ts">
@@ -42,6 +43,7 @@ import SkyButton from '@/components/button/Button.vue'
 import { ButtonInstance } from '@/components/button/types.ts'
 import Collapse from '@/components/collapse/collapse.vue'
 import Item from '@/components/collapse/collapse-item.vue'
+import Icon from '@/components/icon/icon.vue'
 
 const buttonRef = ref<ButtonInstance | null>(null)
 const openValue = ref(['a'])
