@@ -14,6 +14,7 @@
         :id="`collapse-title-${name}`" 
         @click="handleClick">
         <slot name="title">{{ title }}</slot>
+        <Icon class="header-angle" icon="angle-right"></Icon>
       </div>
       <Transition name="fade" v-on="TransitionEvents">
         <div class="collapse-item__wrapper" v-show="isActive">
@@ -28,7 +29,9 @@
 <script setup lang="ts">
 import {inject,computed} from 'vue'
 import type { CollapseItemProps } from './types'
-import {CollapseContextKey} from './types'
+import { CollapseContextKey } from './types'
+import Icon from '../icon/icon.vue'
+
 const props = defineProps<CollapseItemProps>()
 
 const collapseContext = inject(CollapseContextKey)

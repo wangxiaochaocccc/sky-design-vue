@@ -1,5 +1,5 @@
 <template>
-  <i class="sky-icon" :class="{[`sky-icon--${type}`] : type }" :style="customStyles">
+  <i class="sky-icon" :class="{[`sky-icon--${type}`] : type }" :style="customStyles" v-bind="$attrs">
     <font-awesome-icon v-bind="filteredProps"/>
   </i>
 </template>
