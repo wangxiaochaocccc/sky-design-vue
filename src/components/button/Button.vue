@@ -10,10 +10,12 @@
         'is-round':rounded,
         'is-disabled':disabled
       }"
-      :disabled="disabled"
+      :disabled="disabled || loading"
       :type="nativeType"
       :autofocus="autofocus"
     >
+      <Icon icon="spinner" spin v-if="loading"></Icon>
+      <Icon :icon="icon" v-if="icon"></Icon>
       <span>
         <slot/>
       </span>
@@ -23,6 +25,7 @@
 <script setup lang="ts">
 import {ref} from 'vue'
 import type { ButtonProps } from './types'
+import Icon from '../icon/icon.vue'
 import './style.css'
 
 defineOptions({

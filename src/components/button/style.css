@@ -79,7 +79,7 @@
     background-color: var(--sky-button-disabled-bg-color);
     border-color: var(--sky-button-disabled-border-color);
   }
-  [class*=vk-icon] + span {
+  [class*=sky-icon] + span {
     margin-left: 6px;
   }
 }

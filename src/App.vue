@@ -17,6 +17,8 @@
   <div class="button-div">
     <sky-button type="primary" size="small">确定</sky-button>
     <sky-button  type="info" size="large">确定</sky-button>
+    <sky-button  type="info" size="large" :loading="true">loading</sky-button>
+    <sky-button  type="info" size="large" icon="arrow-up">向上</sky-button>
   </div>
   <h1>collapse测试</h1>
   <Collapse v-model="openValue" accrroding> 
