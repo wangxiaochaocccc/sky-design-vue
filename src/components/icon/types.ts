@@ -26,4 +26,6 @@ export interface iconPorps {
   beatFade?: boolean
   spinPulse?: boolean
   spinReverse?: boolean
+  color?: string
+  type?: 'success' | 'warning' | 'danger' | 'primary' | 'info'
 }

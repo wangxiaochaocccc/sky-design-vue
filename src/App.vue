@@ -34,7 +34,7 @@
     </item>
   </Collapse>
   {{ openValue }}
-  <icon icon="comment"></icon>
+  <icon icon="comment" type="danger"></icon>
  </div>
 </template>
 <script setup lang="ts">
